@@ -36,13 +36,23 @@ Config NUI : `pn-loadingscreen/html/cdn-config.js` (`window.LOADING_IMAGE_BASE`)
 
 Contenu attendu dans `loading/` : `bg_01.jpg`…`bg_XX.jpg`, `Logo.png`, `manifest.json`.
 
+## CDN vehicles
+
+```text
+https://cdn.jsdelivr.net/gh/Nico-du-34/lumarp.images@main/vehicles/{model}.png
+```
+
+Utilisé par `jg-dealerships` et `jg-advancedgarages` (NUI). Fallback docs.fivem.net si PNG absent.
+
+Nom de fichier = spawn code / modèle (casse exacte), ex. `adder.png`.
+
 ## Checklist de migration
 
 | Dossier | Source sur le serveur | Volume | Statut |
 | --- | --- | --- | --- |
 | `inventory/` | `ox_inventory/web/images/` | ~963 / ~21 Mo | **migré** |
 | `loading/` | `pn-loadingscreen/html/images/` + `Logo.png` | ~28 / ~6.7 Mo | **migré** |
-| `vehicles/` | `jg-dealerships/vehicle_images/` | ~935 PNG / ~76 Mo | à faire |
+| `vehicles/` | `jg-dealerships/vehicle_images/` | ~935 PNG / ~76 Mo | **migré** |
 
 ### Hors scope (ne pas dupliquer)
 
@@ -51,6 +61,7 @@ Contenu attendu dans `loading/` : `bg_01.jpg`…`bg_XX.jpg`, `Logo.png`, `manife
 - Packs install jg-mechanic / pn-fishing (déjà dans inventory)
 - UI qs-housing
 - `pn-loadingscreen/html/music.mp3` (reste local)
+- `jg-advancedgarages/vehicle_images/` (dossier vide, fallback CDN)
 
 ### Workflow
 
